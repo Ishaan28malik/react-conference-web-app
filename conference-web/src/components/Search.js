@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "../index.css";
 
 const Search = ({ list, setFilterList }) => {
   const [searchtext, setSearchText] = useState("");

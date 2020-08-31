@@ -3,8 +3,8 @@ import Conference from "./components/Conference";
 import spinner from "./assets/spinner.gif";
 import Search from "./components/Search";
 import axios from "axios";
-import index from "../src/index.css";
-// import Container from "@material-ui/core/Container";
+import { StylesProvider } from "@material-ui/core";
+import styles from "./index.css";
 
 const CONFERENCE_API_URL =
   "https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences/?s=conf&s=aws&s=Developer&s=Conference";
@@ -27,42 +27,38 @@ const App = () => {
   return (
     <div>
       <div>
-        <h1 style={{ display: "flex", justifyContent: "center" }}>
-          Developer Conference Hub
-        </h1>
+        <h1 className={styles}>Developer Conference Hub</h1>
         <Search list={list} setFilterList={setFilterList} />
-        <h3 style={{ display: "flex", justifyContent: "center" }}>
-          Conference list
-        </h3>
+        <h3 className={styles}>Conference list</h3>
         <div
           style={{
             display: "flex",
             flexDirection: "row",
-            // overflowX: "scroll",
             margin: "50px",
             border: "5px solid",
             borderRadius: "20px",
           }}
         >
           <div
+            // className={styles.buttons}
             style={{
               display: "flex",
               justifyContent: "center",
               margin: "5px",
             }}
           >
-            {/* <Container maxWidth="sm"> */}
             <button
-              style={{
-                cursor: "pointer",
-                width: "45px",
-                height: "30px",
-                marginRight: "10px",
-                borderRadius: "10px",
-                backgroundColor: "white",
-                color: "#1976d2",
-                borderColor: "#0915ed",
-              }}
+              className={styles.button}
+              // style={{
+              //   cursor: "pointer",
+              //   width: "45px",
+              //   height: "30px",
+              //   marginRight: "10px",
+              //   borderRadius: "10px",
+              //   backgroundColor: "white",
+              //   color: "#1976d2",
+              //   borderColor: "#0915ed",
+              // }}
               onClick={() => {
                 setFilterList(free);
               }}
@@ -70,16 +66,17 @@ const App = () => {
               Free
             </button>
             <button
-              style={{
-                cursor: "pointer",
-                width: "45px",
-                height: "30px",
-                marginRight: "10px",
-                borderRadius: "10px",
-                backgroundColor: "white",
-                color: "#1976d2",
-                borderColor: "#0915ed",
-              }}
+              className={styles.button}
+              // style={{
+              //   cursor: "pointer",
+              //   width: "45px",
+              //   height: "30px",
+              //   marginRight: "10px",
+              //   borderRadius: "10px",
+              //   backgroundColor: "white",
+              //   color: "#1976d2",
+              //   borderColor: "#0915ed",
+              // }}
               onClick={() => {
                 setFilterList(paid);
               }}
@@ -88,9 +85,9 @@ const App = () => {
               Paid
               {/* </input> */}
             </button>
-            {/* </Container> */}
           </div>
           <div
+            // className={styles.conferencelist}
             style={{
               display: "flex",
               flexDirection: "row",

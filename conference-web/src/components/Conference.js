@@ -1,7 +1,7 @@
 import React from "react";
 import jcloud from "../assets/jcloud.jpg";
 import Card from "@material-ui/core/Card";
-import { shadows } from "@material-ui/system";
+import styles from "../index.css";
 
 const DEFAULT_PLACEHOLDER_IMAGE = jcloud;
 
@@ -19,7 +19,6 @@ const Conference = ({ conference }) => {
           height: "450px",
           boxShadow: "5px 5px 5px 3px black",
         }}
-        boxShadow={10}
       >
         <h2 style={{ display: "flex", justifyContent: "center" }}>
           {conference.confName}
