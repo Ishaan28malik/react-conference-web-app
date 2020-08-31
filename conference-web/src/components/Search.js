@@ -14,14 +14,19 @@ const Search = ({ list, setFilterList }) => {
   };
   return (
     <form style={{ display: "flex", justifyContent: "center" }}>
-      <input value={searchtext} type="text" onChange={handleSearch} />
-      <input type="submit" value="SEARCH" />
+      <input
+        style={{ width: "150px", borderRadius: "10px 0px 0px 10px" }}
+        value={searchtext}
+        type="text"
+        onChange={handleSearch}
+      />
+      <input
+        type="submit"
+        value="SEARCH"
+        style={{ borderRadius: "0px 10px 10px 0px" }}
+      />
     </form>
   );
 };
 
 export default Search;
-
-// const filterByRoleName = roleList
-//             .filter(val => val.role_name.toUpperCase().includes(e.target.value.toUpperCase()))
-//             .map(role => ({ role_name: role.role_name, user_role_id: role.user_role_id }));

@@ -19,6 +19,7 @@ const App = () => {
       setList(res.data.paid);
       setFree(res.data.free);
       setPaid(res.data.paid);
+      /* By default the List will show Paid events */
       setFilterList(res.data.paid);
     });
   }, []);
@@ -26,7 +27,7 @@ const App = () => {
     <div>
       <div>
         <h1 style={{ display: "flex", justifyContent: "center" }}>
-          Conference Hub
+          Developer Conference Hub
         </h1>
         <Search list={list} setFilterList={setFilterList} />
         <p style={{ display: "flex", justifyContent: "center" }}>
@@ -35,8 +36,10 @@ const App = () => {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button
             style={{
-              width: "100px",
-              height: "50px",
+              width: "45px",
+              height: "30px",
+              marginRight: "20px",
+              borderRadius: "10px",
             }}
             onClick={() => {
               setFilterList(free);
@@ -46,31 +49,48 @@ const App = () => {
           </button>
           <button
             style={{
-              width: "100px",
-              height: "50px",
+              width: "45px",
+              height: "30px",
+              marginRight: "20px",
+              borderRadius: "10px",
             }}
             onClick={() => {
               setFilterList(paid);
             }}
           >
+            {/* <input type="checkbox" class="check"> */}
             Paid
+            {/* </input> */}
           </button>
         </div>
-
         <div
           style={{
             display: "flex",
             flexDirection: "row",
-            overflow: "scroll",
+            // overflowX: "scroll",
+            margin: "50px",
+            border: "5px solid",
+            borderRadius: "20px",
           }}
         >
-          {/* {loading ? <img className="spinner" src={spinner} alt="Loading spinner" /> : <ResultsTable results={data} />} */}
-          {filterlist.map((conference, index) => (
-            <Conference
-              key={`${index}-${conference.confName}`}
-              conference={conference}
-            />
-          ))}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              overflowX: "scroll",
+              margin: "10px",
+              // border: "1px solid",
+              // borderRadius: "20px",
+            }}
+          >
+            {/* {loading ? <img className="spinner" src={spinner} alt="Loading spinner" /> : <ResultsTable results={data} />} */}
+            {filterlist.map((conference, index) => (
+              <Conference
+                key={`${index}-${conference.confName}`}
+                conference={conference}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
