@@ -1,24 +1,26 @@
 import React from "react";
+import jcloud from '../assets/jcloud.jpg';
 
 const DEFAULT_PLACEHOLDER_IMAGE =
-    "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg";
+    // "https://cdn.pixabay.com/photo/2016/08/16/09/53/international-conference-1597531__340.jpg";
+    { jcloud };
 
-const Movie = ({ movie }) => {
+const Conference = ({ conference }) => {
     const image =
-        movie.imageURL === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : movie.imageURL;
+        conference.imageURL === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : conference.imageURL;
     return (
-        <div className="movie">
-            <h2>{movie.confName}</h2>
+        <div className="conference">
+            <h2>{conference.confName}</h2>
             <div>
                 <img
                     width="200"
-                    alt={`Conference Name: ${movie.confName}`}
+                    alt={`Conference Name: ${conference.confName}`}
                     src={image}
                 />
             </div>
-            <p>({movie.confStartDate})</p>
+            <p>({conference.confStartDate})</p>
         </div>
     );
 };
 
-export default Movie;
+export default Conference;

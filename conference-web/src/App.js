@@ -6,8 +6,7 @@ import Search from "./components/Search";
 import { initialState, reducer } from "./store/reducer";
 import axios from "axios";
 
-// const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b";
-const CONFERENCE_API_URL = "https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences";
+const CONFERENCE_API_URL = "https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences/?s=conf&s=aws&s=Developer&s=Conference";
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -17,7 +16,7 @@ const App = () => {
       console.log('jsonResponse.data.Search', jsonResponse.data.free);
       dispatch({
         type: "SEARCH_CONFERENCES_SUCCESS",
-        payload: jsonResponse.data.paid
+        payload: jsonResponse.data.paid && jsonResponse.data.free
       });
     });
   }, []);
@@ -32,9 +31,10 @@ const App = () => {
       type: "SEARCH_CONFERENCES_REQUEST"
     });
 
-    axios(`https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences/`).then(
+    axios(`https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences/?s=${searchValue}&s=${searchValue}&s=${searchValue}&s=${searchValue}`).then(
       jsonResponse => {
-        if (jsonResponse.data.Response === "True") {
+        console.log('jsonResponse.data.Response', jsonResponse.data.display_paid);
+        if (jsonResponse.data.display_paid === "1") {
           dispatch({
             type: "SEARCH_CONFERENCES_SUCCESS",
             payload: jsonResponse.data.paid
@@ -49,18 +49,16 @@ const App = () => {
     );
   };
 
-  const { conferences, errorMessage, loading } = state;
+  const { conferences, loading } = state;
 
   const retrievedConferences =
-    loading && !errorMessage ? (
+    loading ? (
       <img className="spinner" src={spinner} alt="Loading spinner" />
-    ) : errorMessage ? (
-      <div className="errorMessage">{errorMessage}</div>
     ) : (
-          conferences.map((movie, index) => (
-            <Conference key={`${index}-${movie.confName}`} movie={movie} />
-          ))
-        );
+        conferences.map((conference, index) => (
+          <Conference key={`${index}-${conference.confName}`} conference={conference} />
+        ))
+      );
 
   return (
     <div className="App">
@@ -68,7 +66,7 @@ const App = () => {
         <h1>Conference Hub</h1>
         <Search search={search} />
         <p className="App-intro">Conference list</p>
-        <div className="movies">{retrievedConferences}</div>
+        <div className="conferences">{retrievedConferences}</div>
       </div>
     </div>
   );
