@@ -4,6 +4,7 @@ import spinner from "./assets/spinner.gif";
 import Search from "./components/Search";
 import axios from "axios";
 import index from "../src/index.css";
+// import Container from "@material-ui/core/Container";
 
 const CONFERENCE_API_URL =
   "https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences/?s=conf&s=aws&s=Developer&s=Conference";
@@ -30,39 +31,9 @@ const App = () => {
           Developer Conference Hub
         </h1>
         <Search list={list} setFilterList={setFilterList} />
-        <p style={{ display: "flex", justifyContent: "center" }}>
+        <h3 style={{ display: "flex", justifyContent: "center" }}>
           Conference list
-        </p>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <button
-            style={{
-              width: "45px",
-              height: "30px",
-              marginRight: "20px",
-              borderRadius: "10px",
-            }}
-            onClick={() => {
-              setFilterList(free);
-            }}
-          >
-            Free
-          </button>
-          <button
-            style={{
-              width: "45px",
-              height: "30px",
-              marginRight: "20px",
-              borderRadius: "10px",
-            }}
-            onClick={() => {
-              setFilterList(paid);
-            }}
-          >
-            {/* <input type="checkbox" class="check"> */}
-            Paid
-            {/* </input> */}
-          </button>
-        </div>
+        </h3>
         <div
           style={{
             display: "flex",
@@ -73,6 +44,52 @@ const App = () => {
             borderRadius: "20px",
           }}
         >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              margin: "5px",
+            }}
+          >
+            {/* <Container maxWidth="sm"> */}
+            <button
+              style={{
+                cursor: "pointer",
+                width: "45px",
+                height: "30px",
+                marginRight: "10px",
+                borderRadius: "10px",
+                backgroundColor: "white",
+                color: "#1976d2",
+                borderColor: "#0915ed",
+              }}
+              onClick={() => {
+                setFilterList(free);
+              }}
+            >
+              Free
+            </button>
+            <button
+              style={{
+                cursor: "pointer",
+                width: "45px",
+                height: "30px",
+                marginRight: "10px",
+                borderRadius: "10px",
+                backgroundColor: "white",
+                color: "#1976d2",
+                borderColor: "#0915ed",
+              }}
+              onClick={() => {
+                setFilterList(paid);
+              }}
+            >
+              {/* <input type="checkbox" class="check"> */}
+              Paid
+              {/* </input> */}
+            </button>
+            {/* </Container> */}
+          </div>
           <div
             style={{
               display: "flex",

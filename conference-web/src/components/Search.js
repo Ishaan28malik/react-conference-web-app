@@ -18,7 +18,7 @@ const Search = ({ list, setFilterList }) => {
     <form style={{ display: "flex", justifyContent: "center" }}>
       <input
         style={{
-          width: "250px",
+          width: "280px",
           height: "30px",
           borderRadius: "10px 0px 0px 10px",
         }}
