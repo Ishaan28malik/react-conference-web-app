@@ -2,16 +2,17 @@ import React from "react";
 import jcloud from "../assets/jcloud.jpg";
 
 const DEFAULT_PLACEHOLDER_IMAGE =
-  "https://cdn.pixabay.com/photo/2016/08/16/09/53/international-conference-1597531__340.jpg";
-//   { jcloud };
+  //   "https://cdn.pixabay.com/photo/2016/08/16/09/53/international-conference-1597531__340.jpg";
+  jcloud;
 
 const Conference = ({ conference }) => {
-  let image =
-    conference.imageURL !== null
-      ? conference.imageURL
-      : DEFAULT_PLACEHOLDER_IMAGE;
+  let image = conference.imageURL.includes(
+    '"https://storage.googleapis.com/konfhub-bd9c9.appspot.com/'
+  )
+    ? DEFAULT_PLACEHOLDER_IMAGE
+    : conference.imageURL;
   return (
-    <div style={{ marginRight: "200px" }}>
+    <div style={{ marginRight: "100px" }}>
       <h2>{conference.confName}</h2>
       <div>
         <img

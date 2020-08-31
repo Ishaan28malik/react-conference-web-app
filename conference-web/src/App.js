@@ -3,6 +3,7 @@ import Conference from "./components/Conference";
 import spinner from "./assets/spinner.gif";
 import Search from "./components/Search";
 import axios from "axios";
+import index from "../src/index.css";
 
 const CONFERENCE_API_URL =
   "https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences/?s=conf&s=aws&s=Developer&s=Conference";
@@ -60,6 +61,7 @@ const App = () => {
           style={{
             display: "flex",
             flexDirection: "row",
+            overflow: "scroll",
           }}
         >
           {/* {loading ? <img className="spinner" src={spinner} alt="Loading spinner" /> : <ResultsTable results={data} />} */}
