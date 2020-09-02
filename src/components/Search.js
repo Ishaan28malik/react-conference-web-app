@@ -19,20 +19,21 @@ const Search = ({ list, setFilterList }) => {
     <form style={{ display: "flex", justifyContent: "center" }}>
       <input
         style={{
+          textAlign: "center",
           width: "280px",
           height: "30px",
-          borderRadius: "10px 0px 0px 10px",
+          borderRadius: "10px 10px 10px 10px",
         }}
         value={searchtext}
         type="text"
         onChange={handleSearch}
-        placeholder="Enter the Conf Name OR City"
+        placeholder="Enter the Conference Name OR the City"
       />
-      <input
+      {/* <button
         type="submit"
         value="SEARCH"
         style={{ borderRadius: "0px 10px 10px 0px" }}
-      />
+      /> */}
     </form>
   );
 };
