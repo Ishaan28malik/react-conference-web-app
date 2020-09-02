@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-conference-web-app/static/css/main.6e1a9b75.chunk.css",
+    "main.js": "/react-conference-web-app/static/js/main.743343fd.chunk.js",
+    "main.js.map": "/react-conference-web-app/static/js/main.743343fd.chunk.js.map",
+    "runtime-main.js": "/react-conference-web-app/static/js/runtime-main.02aabd97.js",
+    "runtime-main.js.map": "/react-conference-web-app/static/js/runtime-main.02aabd97.js.map",
+    "static/js/2.f3f0718b.chunk.js": "/react-conference-web-app/static/js/2.f3f0718b.chunk.js",
+    "static/js/2.f3f0718b.chunk.js.map": "/react-conference-web-app/static/js/2.f3f0718b.chunk.js.map",
+    "index.html": "/react-conference-web-app/index.html",
+    "precache-manifest.c74192ce9888d0f40e21133c267b89ae.js": "/react-conference-web-app/precache-manifest.c74192ce9888d0f40e21133c267b89ae.js",
+    "service-worker.js": "/react-conference-web-app/service-worker.js",
+    "static/css/main.6e1a9b75.chunk.css.map": "/react-conference-web-app/static/css/main.6e1a9b75.chunk.css.map",
+    "static/js/2.f3f0718b.chunk.js.LICENSE.txt": "/react-conference-web-app/static/js/2.f3f0718b.chunk.js.LICENSE.txt",
+    "static/media/Dev.jpg": "/react-conference-web-app/static/media/Dev.abcf83f7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.02aabd97.js",
+    "static/js/2.f3f0718b.chunk.js",
+    "static/css/main.6e1a9b75.chunk.css",
+    "static/js/main.743343fd.chunk.js"
+  ]
+}
