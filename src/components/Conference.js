@@ -28,7 +28,7 @@ const Conference = ({ conference }) => {
             overflow: "hidden ",
             textOverflow: "ellipsis",
             display: "inline-block",
-            width: "200px",
+            width: "250px",
             whiteSpace: "nowrap",
             margin: "10px",
             textDecoration: "underline",
