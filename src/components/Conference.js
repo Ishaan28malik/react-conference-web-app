@@ -20,9 +20,22 @@ const Conference = ({ conference }) => {
           boxShadow: "5px 5px 5px 3px black",
         }}
       >
-        <h2 style={{ display: "flex", justifyContent: "center" }}>
+        <h3
+          style={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            overflow: "hidden ",
+            textOverflow: "ellipsis",
+            display: "inline-block",
+            width: "200px",
+            whiteSpace: "nowrap",
+            margin: "10px",
+            textDecoration: "underline",
+          }}
+        >
           {conference.confName}
-        </h2>
+        </h3>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <img
             width="200px"
@@ -32,8 +45,17 @@ const Conference = ({ conference }) => {
           />
         </div>
         <p style={{ display: "flex", justifyContent: "center" }}>
-          {conference.confStartDate} ({conference.entryType})
+          {conference.confStartDate}
         </p>
+        <b
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            textDecoration: "underline",
+          }}
+        >
+          [{conference.entryType}]
+        </b>
         <p style={{ display: "flex", justifyContent: "center" }}>
           {conference.country} ({conference.city})
         </p>

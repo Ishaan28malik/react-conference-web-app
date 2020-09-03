@@ -31,6 +31,53 @@ const App = () => {
         <Search list={list} setFilterList={setFilterList} />
         <h3 className={styles}>Conference list</h3>
         <div
+          // className={styles.buttons}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "5px",
+          }}
+        >
+          <button
+            className={styles.button}
+            // style={{
+            //   cursor: "pointer",
+            //   width: "45px",
+            //   height: "30px",
+            //   marginRight: "10px",
+            //   borderRadius: "10px",
+            //   backgroundColor: "white",
+            //   color: "#1976d2",
+            //   borderColor: "#0915ed",
+            // }}
+            onClick={() => {
+              setFilterList(free);
+            }}
+          >
+            Free
+          </button>
+          <button
+            className={styles.button}
+            // style={{
+            //   cursor: "pointer",
+            //   width: "45px",
+            //   height: "30px",
+            //   marginRight: "10px",
+            //   borderRadius: "10px",
+            //   backgroundColor: "white",
+            //   color: "#1976d2",
+            //   borderColor: "#0915ed",
+            // }}
+            onClick={() => {
+              setFilterList(paid);
+            }}
+          >
+            {/* <input type="checkbox" class="check"> */}
+            Paid
+            {/* </input> */}
+          </button>
+        </div>
+        <div
           style={{
             display: "flex",
             flexDirection: "row",
@@ -39,53 +86,6 @@ const App = () => {
             borderRadius: "20px",
           }}
         >
-          <div
-            // className={styles.buttons}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              margin: "5px",
-            }}
-          >
-            <button
-              className={styles.button}
-              // style={{
-              //   cursor: "pointer",
-              //   width: "45px",
-              //   height: "30px",
-              //   marginRight: "10px",
-              //   borderRadius: "10px",
-              //   backgroundColor: "white",
-              //   color: "#1976d2",
-              //   borderColor: "#0915ed",
-              // }}
-              onClick={() => {
-                setFilterList(free);
-              }}
-            >
-              Free
-            </button>
-            <button
-              className={styles.button}
-              // style={{
-              //   cursor: "pointer",
-              //   width: "45px",
-              //   height: "30px",
-              //   marginRight: "10px",
-              //   borderRadius: "10px",
-              //   backgroundColor: "white",
-              //   color: "#1976d2",
-              //   borderColor: "#0915ed",
-              // }}
-              onClick={() => {
-                setFilterList(paid);
-              }}
-            >
-              {/* <input type="checkbox" class="check"> */}
-              Paid
-              {/* </input> */}
-            </button>
-          </div>
           <div
             // className={styles.conferencelist}
             style={{
