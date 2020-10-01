@@ -1,60 +1,67 @@
 body {
-  margin: 0;
-  padding: 0;
-  /* display: flex; */
-  /* justify-content: center; */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    /* justify-content: center; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #072540;
+    color: #93c2db;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 conferenceDisplay {
-  display: flex;
-  flex-direction: row;
-  margin: 50px;
-  border: 5px solid;
-  border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    border: 5px solid;
+    border-radius: 20px;
 }
+
 buttons {
-  display: flex;
-  justify-content: center;
-  margin: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
 }
+
 button {
-  cursor: pointer;
-  width: 45px;
-  height: 30px;
-  margin-right: 10px;
-  border-radius: 10px;
-  background-color: white;
-  color: #1976d2;
-  border-color: #0915ed;
+    cursor: pointer;
+    width: 45px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: white;
+    color: #1976d2;
+    border-color: #0915ed;
 }
+
 conferencelist {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  margin: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 10px;
 }
+
 h1 {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 h3 {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 form {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
+
 /* input {
   width: 280px;
   height: 30px;
