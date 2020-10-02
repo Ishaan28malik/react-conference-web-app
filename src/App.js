@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Conference from "./components/Conference";
-import spinner from "./assets/spinner.gif";
 import Search from "./components/Search";
 import axios from "axios";
-import { StylesProvider } from "@material-ui/core";
 import styles from "./index.css";
 
 const CONFERENCE_API_URL =
@@ -14,7 +12,7 @@ const App = () => {
   const [filterlist, setFilterList] = useState([]);
   const [free, setFree] = useState([]);
   const [paid, setPaid] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   useEffect(() => {
     axios.get(CONFERENCE_API_URL).then((res) => {
       setList(res.data.paid);
@@ -40,16 +38,6 @@ const App = () => {
         >
           <button
             className={styles.button}
-            // style={{
-            //   cursor: "pointer",
-            //   width: "45px",
-            //   height: "30px",
-            //   marginRight: "10px",
-            //   borderRadius: "10px",
-            //   backgroundColor: "white",
-            //   color: "#1976d2",
-            //   borderColor: "#0915ed",
-            // }}
             onClick={() => {
               setFilterList(free);
             }}
@@ -58,23 +46,11 @@ const App = () => {
           </button>
           <button
             className={styles.button}
-            // style={{
-            //   cursor: "pointer",
-            //   width: "45px",
-            //   height: "30px",
-            //   marginRight: "10px",
-            //   borderRadius: "10px",
-            //   backgroundColor: "white",
-            //   color: "#1976d2",
-            //   borderColor: "#0915ed",
-            // }}
             onClick={() => {
               setFilterList(paid);
             }}
           >
-            {/* <input type="checkbox" class="check"> */}
             Paid
-            {/* </input> */}
           </button>
         </div>
         <div
@@ -87,17 +63,13 @@ const App = () => {
           }}
         >
           <div
-            // className={styles.conferencelist}
             style={{
               display: "flex",
               flexDirection: "row",
               overflowX: "scroll",
               margin: "10px",
-              // border: "1px solid",
-              // borderRadius: "20px",
             }}
           >
-            {/* {loading ? <img className="spinner" src={spinner} alt="Loading spinner" /> : <ResultsTable results={data} />} */}
             {filterlist.map((conference, index) => (
               <Conference
                 key={`${index}-${conference.confName}`}

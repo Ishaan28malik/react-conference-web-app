@@ -1,7 +1,6 @@
 import React from "react";
 import Dev from "../assets/Dev.jpg";
 import Card from "@material-ui/core/Card";
-import styles from "../index.css";
 
 const DEFAULT_PLACEHOLDER_IMAGE = Dev;
 
@@ -23,7 +22,6 @@ const Conference = ({ conference }) => {
         <h3
           style={{
             textAlign: "center",
-            display: "flex",
             justifyContent: "center",
             overflow: "hidden ",
             textOverflow: "ellipsis",

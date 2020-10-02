@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styles from "../index.css";
 
 const Search = ({ list, setFilterList }) => {
   const [searchtext, setSearchText] = useState("");
@@ -29,11 +28,6 @@ const Search = ({ list, setFilterList }) => {
         onChange={handleSearch}
         placeholder="Enter the Conference Name OR the City"
       />
-      {/* <button
-        type="submit"
-        value="SEARCH"
-        style={{ borderRadius: "0px 10px 10px 0px" }}
-      /> */}
     </form>
   );
 };
