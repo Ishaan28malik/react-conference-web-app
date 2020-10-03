@@ -1,8 +1,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* display: flex; */
-    /* justify-content: center; */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -62,8 +60,3 @@ form {
 }
 
 
-/* input {
-  width: 280px;
-  height: 30px;
-  border-radius: 10px 0px 0px 10px;
-} */
