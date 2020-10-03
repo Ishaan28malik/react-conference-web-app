@@ -29,11 +29,6 @@ const Search = ({ list, setFilterList }) => {
         onChange={handleSearch}
         placeholder="Enter the Conference Name OR the City"
       />
-      {/* <button
-        type="submit"
-        value="SEARCH"
-        style={{ borderRadius: "0px 10px 10px 0px" }}
-      /> */}
     </form>
   );
 };
