@@ -98,12 +98,13 @@ const App = () => {
             }}
           >
             {/* {loading ? <img className="spinner" src={spinner} alt="Loading spinner" /> : <ResultsTable results={data} />} */}
-            {filterlist.map((conference, index) => (
-              <Conference
-                key={`${index}-${conference.confName}`}
-                conference={conference}
-              />
-            ))}
+            {filterlist &&
+              filterlist.map((conference, index) => (
+                <Conference
+                  key={`${index}-${conference.confName}`}
+                  conference={conference}
+                />
+              ))}
           </div>
         </div>
       </div>
