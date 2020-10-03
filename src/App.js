@@ -40,16 +40,6 @@ const App = () => {
         >
           <button
             className={styles.button}
-            // style={{
-            //   cursor: "pointer",
-            //   width: "45px",
-            //   height: "30px",
-            //   marginRight: "10px",
-            //   borderRadius: "10px",
-            //   backgroundColor: "white",
-            //   color: "#1976d2",
-            //   borderColor: "#0915ed",
-            // }}
             onClick={() => {
               setFilterList(free);
             }}
@@ -58,16 +48,6 @@ const App = () => {
           </button>
           <button
             className={styles.button}
-            // style={{
-            //   cursor: "pointer",
-            //   width: "45px",
-            //   height: "30px",
-            //   marginRight: "10px",
-            //   borderRadius: "10px",
-            //   backgroundColor: "white",
-            //   color: "#1976d2",
-            //   borderColor: "#0915ed",
-            // }}
             onClick={() => {
               setFilterList(paid);
             }}
@@ -93,8 +73,6 @@ const App = () => {
               flexDirection: "row",
               overflowX: "scroll",
               margin: "10px",
-              // border: "1px solid",
-              // borderRadius: "20px",
             }}
           >
             {/* {loading ? <img className="spinner" src={spinner} alt="Loading spinner" /> : <ResultsTable results={data} />} */}
